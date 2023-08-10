@@ -6,7 +6,7 @@ import img from '../../../public/logo.png'
 function NavigationBar() {
     return (
         <>
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 w-[90%] mx-auto">
             <div className="flex-1">
                 <GiHamburgerMenu></GiHamburgerMenu>
             </div>
