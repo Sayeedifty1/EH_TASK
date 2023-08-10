@@ -1,0 +1,44 @@
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    color: gray;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    /* Occupy the full width of the sidebar */
+    border-right: 3px solid transparent;
+    padding-left: 10px;
+    /* Adjust to match the padding of your icon */
+    position: relative;
+    /* Add position relative for the overlay effect */
+    transition: color 0.3s, border-right-color 0.3s;
+    display: flex;
+    /* Added to align content left */
+    align-items: start;
+    /* Added to align content vertically */
+}
+
+.option.selected {
+    color: black;
+}
+
+.option.selected::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -74px;
+    /* Position the orange overlay */
+    width: 300px;
+    height: 100%;
+    padding: 10px 0;
+    border-right: 3px solid rgb(225, 83, 0);
+    border-top-left-radius: 5px;
+    /* Rounded top-left corner */
+    border-bottom-left-radius: 5px;
+    /* Rounded bottom-left corner */
+    pointer-events: none;
+    /* Ensure the overlay doesn't interfere with clicks */
+}
